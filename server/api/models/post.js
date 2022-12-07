@@ -29,12 +29,13 @@ class Post  {
     static findById(id) {
         return new Promise(async (resolve, reject) => {
             try {
+                //finding the id and add onto array
                 const db = await initi();
                 let postsData = await db.collection("posts").find({post_id : parseInt(id)}).toArray();
-            
+                //resolve by new post from first post
                 const post = new Post(postsData[0]);
                 resolve(post);
-
+                //different errors to throw and why 
                 if(!id) throw new Error("No Post Id");
                 if(!postsData.length) throw new Error("Post not found");
             }
@@ -45,8 +46,29 @@ class Post  {
         })
     }
     
-    static async createPost(){
-        
+    static async createPost(title, name, content){
+        return new Promise (async (resolve, reject) => {
+            try {
+                //create the sorted post version
+                const db = await initi();
+                const sortedP = await db.collections("posts").find().sort({post_id: -1}).toArray();
+                const newPId = sortedP.length ? sortedP[0].post_id + 1 : 1;
+                //structure
+                let newPost = {
+                    post_id : newPId,
+                    title : title,
+                    name: name,
+                    content : content,
+                };
+                //await the insert (create post one at a time)
+                await db.collection("posts").insertOne(newPost)
+                resolve(newPost)
+
+            }
+            catch(err) {
+                reject(err);
+            }
+        })
     }
 }
 
