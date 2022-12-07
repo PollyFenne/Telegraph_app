@@ -10,4 +10,3 @@ const initi = async () => {
 }
 
 module.exports = { initi }
-const mongo = new MongoClient()
