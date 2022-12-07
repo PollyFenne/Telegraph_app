@@ -6,7 +6,7 @@ async function loadData(e){
         const postData = await data.json();
 
         console.log(postData);
-        console.log("###########################",postData[postData.length-1]._id);
+        console.log("This is a long post",postData[postData.length-1]._id);
         const id = postData[postData.length-1]._id;
         const dataFromID = await fetch(`http://localhost:3000/api/posts/${id}`)
         const dataFromIDJsonified = await dataFromID.json();
