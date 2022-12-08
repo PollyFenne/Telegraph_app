@@ -7,7 +7,7 @@ services:
       - 3000:3000
     environment:
       - DB_NAME=postsDatabase
-      - DB_CONNECTION=mongodb+srv://mizupp:Mizna123@cluster0.4soxi1r.mongodb.net/?retryWrites=true&w=majority
+      - DB_CONNECTION=mongodb://mizna:password@db:27017
     depends_on:
       - db
     volumes:
@@ -22,8 +22,8 @@ services:
       - "dbdata:/var/lib/mongodb/data"
       - "./db/seeds.js:/docker-entrypoint-initdb.d/seeds.js:ro"
     environment:
-      - MONGO_INITDB_ROOT_USERNAME=mizupp
+      - MONGO_INITDB_ROOT_USERNAME=mizna
       - MONGO_INITDB_DATABASE=posts
-      - MONGO_INITDB_ROOT_PASSWORD=Mizna123
+      - MONGO_INITDB_ROOT_PASSWORD=password
 volumes:
   dbdata:

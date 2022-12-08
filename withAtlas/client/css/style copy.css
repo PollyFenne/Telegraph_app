@@ -4,17 +4,6 @@ font-family: 'Playfair Display', serif;
 font-family: 'Questrial', sans-serif; 
 */
 
-:root {
-  /* --blue: #181D31;
-  --olivegreen: #678983;
-  --yellow:#E6DDC4
-  --lightyellow: #F0E9D2; */
-  --black: #000000;
-  --grey: #282A3A;
-  --brown: #735F32;
-  --orange:#C69749;
-}
-
 * {
   box-sizing: border-box;
   margin:0;
@@ -30,47 +19,27 @@ body {
   height:100vh;
   opacity: 1;
 	transition: 1s opacity;
-  background-color: rgb(87, 87, 87);
-  background: linear-gradient(
-    to bottom,
-    #c69649c4,
-    rgba(0,0,0, 100)
-  ),url(./waterdrop.gif);
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-  animation: fadeInAnimation ease 3s;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
 }
 
+body .fade-in{
+	opacity: 0;
+	transition: none;
+}
 /* spacing */
 .wrapper {
   width:100vw;
   display: block;
   flex-flow:column nowrap;
   justify-content: center; 
-  background-color: rgba(255, 255, 255, 0.297);
-  color: white;
+  
+  
 }
-
-
  h1{
-  /* font-family: 'Questrial', sans-serif; */
-  font-family: 'Playfair Display', serif;
-  -webkit-text-stroke: 1px white;
-  font-size: 10vh;
+  font-family: 'Questrial', sans-serif;
   font-weight: 800;
   left: 100px;
   top: 30px;
-  background-image: linear-gradient(to left, var(--orange), var(--grey));
-  color: transparent;
-  background-clip: text;
-  -webkit-background-clip: text;
-
-  /* color: white; */
-  /* text-shadow: 10px 5px 5px #000000,
-              -3px -2px 2px var(--orange);;   */
+  color:pink;
   position: relative;
   z-index: 100;
  }
@@ -80,14 +49,14 @@ body {
   position: relative;
   margin-top:3rem;
   font-size: 2rem;
-  z-index: 100;
+  z-index: 10;
   left: 100px;
   background: transparent;
 }
 .wrapper #name {
   font-family: 'Questrial', sans-serif; 
   font-size: 0.9rem;
-  z-index: 100;
+  z-index: 10;
   position: relative;
   left: 100px;
   background: transparent;
@@ -95,7 +64,7 @@ body {
 .wrapper #content {
   font-family: 'Questrial', sans-serif; 
   font-size: 1rem;
-  z-index: 100;
+  z-index: 10;
   position: relative;
   left: 100px;
   background: transparent;
@@ -117,11 +86,11 @@ input {
 /* button */
 .button {
 left: 100px;
-background-color: #ffffff;
-border: 4px solid #ffffff;
+background-color: #eeeded;
+border: 4px solid #222222;
 border-radius: 30px;
 box-sizing: border-box;
-color: var(--orange);
+color: #222222;
 cursor: pointer;
 display: inline-block;
 font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,"Helvetica Neue",sans-serif;
@@ -141,34 +110,16 @@ width: auto;
 z-index: 1;
 }
 
-.wrapall{
-  background-color: rgb(155, 136, 136);
-	border: 1px solid #000;
-	margin: 0 auto;
-	position: relative;
-	animation-delay: 1s;
-	background: #000000;
-	animation-name: daylight;
-	animation-duration: 20s;
-	animation-iteration-count: infinite;
-	overflow: hidden;
-	animation-timing-function: linear;
-}
-@keyframes daylight {
-	0% {  background-color: var(--black); }
-	20% {  background-color: var(--grey); }
-  20% {  background-color: var(--brown); }
-	20% {  background-color: var(--orange); }
-  80% {  background-color: var(--grey); }
-	100% {  background-color: var(--black);}
-}
-
 
 /* display post  */
+
 .title {
   margin-top:3rem;
   font-size: 2rem;
   z-index: 1;
+  height: 200px;
+  width: 200px;
+  line-height: 200px;
   border-radius: 50%;
   font-size: 50px;
   color: rgb(20, 17, 17);
@@ -176,60 +127,53 @@ z-index: 1;
 }
 
 h3{
-  color: var(--brown);
+  color: pink;
   left: 100px;
 }
 .name {
   font-size: 0.9rem;
   z-index: 1;
+  background: linear-gradient(#dee2e6, #999999, #666666, #333333, #000000);
+  z-index: 1;
+  height: 100px;
+  width: 100px;
+  line-height: 100px;
   border-radius: 50%;
   font-size: 20px;
-  color: white;;
+  color: rgb(20, 17, 17);
   text-align: center;
+  position: relative;
   left: 25%;
   align-items: center;
 }
 
 .content {
   font-size: 1rem;
+  background: linear-gradient(#dee2e6, #999999, #666666, #333333, #000000);
   z-index: 1;
-  color: var(--orange);
+  height: 200px;
+  width: 200px;
+  line-height: 200px;
   border-radius: 50%;
   font-size: 50px;
+  color: rgb(20, 17, 17);
   text-align: center;
 }
 
-.newHead{
-  margin-top:3rem;
-  font-size: 1rem;
-  z-index: 100;
-  color: black;
-  font-size: 4em;
-  text-align: center;
-    background-image: linear-gradient(to left, var(--orange), var(--grey));
-  color: transparent;
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-stroke: 1px white;
-}
 #postBody {
+  
   width:80vw;
   z-index: 10;
   background: linear-gradient(#dee2e6, #999999, #666666, #333333, #000000);
   justify-content: center;
   justify-items: center;
-  
 }
 
-
 .button:hover{
-    background-color: var(--brown);
+    background-color: rgb(189, 189, 189);
     transition: 0.6s;
 }
 
-.button::after{
-  background-color: red;
-}
 
 
 
@@ -273,14 +217,19 @@ h3{
     height: 300px;
     width: 100%;
     top: 450px;
-    background: linear-gradient(#e4e6de, var(--orange), var(--brown), var(--grey), #000000);
+    background: linear-gradient(#dee2e6, #999999, #666666, #333333, #000000);
   }
   
+  .hill span {
+    position: absolute;
+    width: 0;
+    height: 0;
+  }
   
   .tree span {
     position: absolute;
     width: 20px;
-    background-color: #252524;
+    background-color: #333333;
     bottom: 0;
     z-index: 2;
   }
@@ -317,10 +266,10 @@ h3{
   
   .tree span:nth-child(1)::before {
     bottom: 180px;
-    background-color: var(--grey);
+    background-color: #999999;
   }
   .tree span:nth-child(2)::before {
-    background-color: var(--brown);
+    background-color: #495057;
     bottom: 380px;
   }
   
@@ -329,10 +278,10 @@ h3{
     height: 200px;
     bottom: 130px;
     right: -90px;
-    background-color: var(--orange);
+    background-color: #242423;
   }
   .tree span:nth-child(4)::before {
-    background-color: var(--black);
+    background-color: #adb5bd;
     bottom: 230px;
   }
   
@@ -343,10 +292,10 @@ h3{
   
   .tree span:nth-child(1)::after {
     bottom: 200px;
-    background-color: #c7b37f;
+    background-color: #adb5bd;
   }
   .tree span:nth-child(2)::after {
-    background-color: #a4a4a3;
+    background-color: #666666;
     bottom: 400px;
   }
   
@@ -355,20 +304,10 @@ h3{
     height: 180px;
     bottom: 150px;
     right: -90px;
-    background-color: #787781;
+    background-color: #333333;
   }
   .tree span:nth-child(4)::after {
-    background-color: #b9c3d4;
+    background-color: #ced4da;
     bottom: 250px;
   }
   
-
-  /* fade in  */
-@keyframes fadeInAnimation {
-  0% {
-      opacity: 0;
-  }
-  100% {
-      opacity: 1;
-   }
-}
