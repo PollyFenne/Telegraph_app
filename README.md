@@ -5,6 +5,7 @@
 
 #This app uses MongoDB to store blog posts
 
+![atlas logo](/atlast.png)
 
 ##To use the app:
 - Data is not destroyed and stored on Mongo Atlas
@@ -12,6 +13,8 @@
 - Run `npm install`
 - Run `npm run dev`
 - Navigate to index.html in client folder; view on live server or through file path on browser.
+
+<!-- ![local logo](./) -->
 
 ##To use the app locally:
 - Data is destroyed on server restart
