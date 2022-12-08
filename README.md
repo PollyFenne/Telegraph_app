@@ -1,1 +1,1 @@
-# Telepgrahp app
+# Telegraph app
