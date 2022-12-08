@@ -1,7 +1,9 @@
 const createForm = () => {
-  const body = document.querySelector("body");
+  
+  const body = document.querySelector(".wrapall");
+  //wrapped
   body.innerHTML =
-    '<form><div class="wrapper"><div><input dir="auto" id="title" contenteditable="true" type="text" placeholder="Title"></div><div><input dir="auto" id="name" contenteditable="true" type="text" placeholder="Your name"></div><div><input dir="auto" id="content" contenteditable="true" type="text" placeholder="Your story..."></div><button class="button" onsubmit="postEntry()">PUBLISH</button><div id="postSection"></div></div></form>';
+    '<h1>Telegraph</h1><form><div class="wrapper"><div><input dir="auto" id="title" contenteditable="true" type="text" placeholder="Title"></div><div><input dir="auto" id="name" contenteditable="true" type="text" placeholder="Your name"></div><div><input dir="auto" id="content" contenteditable="true" type="text" placeholder="Your story..."></div><button class="button" onsubmit="postEntry()">PUBLISH</button><div id="postSection"></div></div></form><div class = "backgroundScene"><div class="land"></div> <div class="rain"></div> <div class="tree"> <span></span> <span></span> <span></span> <span></span>';
   }
 
   const getStory = (id) => {
@@ -79,22 +81,43 @@ const createContent= (text) => {
   return div;
 };
     
-
+//create post body
 const createPost = (title, name, content) => {
   const body = document.querySelector("body");
   body.innerHTML = "";
-
+  const newHeader = document.createElement('h4');
+  newHeader.classList.add("newHead");
   const topDiv = document.createElement("div");
+  newHeader.innerHTML = "Your Telegram is sent";
+  topDiv.appendChild(newHeader);
   topDiv.appendChild(createTitle(title));
   topDiv.appendChild(createName(name));
-
   const div = document.createElement("div");
+  
   div.classList.add("postBody");
   div.appendChild(topDiv);
   div.appendChild(createContent(content));
 
   body.appendChild(div);
+
+
 };
+
+// function fadeIn() {
+//   setInterval(show, 200);
+// }
+// function show() {
+  
+//   var body = document.getElementById("body");
+//   opacity = Number(window.getComputedStyle(body)
+//                    .getPropertyValue("opacity"));
+//   if (opacity < 1) {
+//       opacity = opacity + 0.1;
+//       body.style.opacity = opacity
+//   } else {
+//       clearInterval(intervalID);
+//   }
+// }
 
 
 const updateContent = async () => {
