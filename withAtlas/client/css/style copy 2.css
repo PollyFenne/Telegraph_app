@@ -10,9 +10,9 @@ font-family: 'Questrial', sans-serif;
   --yellow:#E6DDC4
   --lightyellow: #F0E9D2; */
   --black: #000000;
-  --grey: #2000f1;
-  --brown: #787878;
-  --orange:#000000;
+  --grey: #282A3A;
+  --brown: #735F32;
+  --orange:#C69749;
 }
 
 * {
@@ -25,19 +25,19 @@ font-family: 'Questrial', sans-serif;
 /* global */
 body {
   filter: grayscale(50%);
-  overflow: auto;
+  overflow: hidden;
   display:flex;
   justify-content: center;
   width:100vw;
   height:100vh;
   opacity: 1;
 	transition: 1s opacity;
-  background-color: black;
-  /* background: linear-gradient(
+  background-color: rgb(87, 87, 87);
+  background: linear-gradient(
     to bottom,
-    rgba(255, 255, 255, 0.516),
-    #2000f1
-  ),url(./); */
+    #c69649c4,
+    rgba(0,0,0, 100)
+  ),url(./167046856980792308.gif);
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -58,7 +58,7 @@ body {
  h1{
   /* font-family: 'Questrial', sans-serif; */
   font-family: 'Playfair Display', serif;
-  -webkit-text-stroke: 0.1px white;
+  -webkit-text-stroke: 1px white;
   font-size: 10vh;
   font-weight: 800;
   left: 100px;
@@ -67,20 +67,15 @@ body {
   color: transparent;
   background-clip: text;
   -webkit-background-clip: text;
-	animation-name: day;
-	animation-duration: 5s;
-	animation-iteration-count: infinite;
-  animation-timing-function: linear;
+
   /* color: white; */
   /* text-shadow: 10px 5px 5px #000000,
               -3px -2px 2px var(--orange);;   */
   position: relative;
   z-index: 100;
-  
  }
  
 .wrapper #title {
-  color: white;
   font-family: 'Playfair Display', serif;
   position: relative;
   margin-top:3rem;
@@ -90,7 +85,6 @@ body {
   background: transparent;
 }
 .wrapper #name {
-  color: white;
   font-family: 'Questrial', sans-serif; 
   font-size: 0.9rem;
   z-index: 100;
@@ -99,7 +93,6 @@ body {
   background: transparent;
 }
 .wrapper #content {
-  color: white;
   font-family: 'Questrial', sans-serif; 
   font-size: 1rem;
   z-index: 100;
@@ -113,8 +106,6 @@ body {
   margin-bottom:1.5rem;
   border: none;
 }
-
-
 
 input {
   display: inline-block;
@@ -151,7 +142,6 @@ z-index: 1;
 }
 
 .wrapall{
-  color: white;
   background-color: rgb(155, 136, 136);
 	border: 1px solid #000;
 	margin: 0 auto;
@@ -185,12 +175,12 @@ z-index: 1;
 
 /* display post  */
 .title {
-  margin-top:5rem;
+  margin-top:3rem;
+  font-size: 2rem;
   z-index: 1;
   border-radius: 50%;
-  font-size: 4em;
-  color: #2000f1;
-  -webkit-text-stroke: 0.1px white;
+  font-size: 50px;
+  color: rgb(20, 17, 17);
   text-align: center;
 }
 
@@ -199,11 +189,10 @@ h3{
   left: 100px;
 }
 .name {
-  margin-top: 1em;
   font-size: 0.9rem;
   z-index: 1;
   border-radius: 50%;
-  font-size: 2em;
+  font-size: 20px;
   color: white;;
   text-align: center;
   left: 25%;
@@ -211,28 +200,26 @@ h3{
 }
 
 .content {
-  margin-top: 1em;
   font-size: 1rem;
   z-index: 1;
-  font-size: 2em;
+  color: var(--orange);
+  border-radius: 50%;
+  font-size: 50px;
   text-align: center;
-  color: white;
-  overflow-y: visible;
-
 }
 
 .newHead{
-  margin-top:5rem;
+  margin-top:3rem;
   font-size: 1rem;
   z-index: 100;
-  /* color: black; */
-  font-size: 8em;
+  color: black;
+  font-size: 4em;
   text-align: center;
-  background-image: linear-gradient(var(--grey), white); 
+    background-image: linear-gradient(to left, var(--orange), var(--grey));
   color: transparent;
   background-clip: text;
   -webkit-background-clip: text;
-  -webkit-text-stroke: 0.1px white;
+  -webkit-text-stroke: 1px white;
 }
 #postBody {
   width:80vw;
@@ -240,6 +227,7 @@ h3{
   background: linear-gradient(#dee2e6, #999999, #666666, #333333, #000000);
   justify-content: center;
   justify-items: center;
+  
 }
 
 
@@ -290,13 +278,11 @@ h3{
   }
   
   .land {
-    bottom: 0;
     position: absolute;
     height: 300px;
     width: 100%;
-    /* top: 450px; */
-    /* background: linear-gradient(#e4e6de, var(--orange), var(--brown), var(--grey), #000000); */
-    background: linear-gradient( #000000, var(--grey));
+    top: 450px;
+    background: linear-gradient(#e4e6de, var(--orange), var(--brown), var(--grey), #000000);
   }
   
   

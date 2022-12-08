@@ -3,7 +3,7 @@ const createForm = () => {
   const body = document.querySelector(".wrapall");
   //wrapped
   body.innerHTML =
-    '<h1>Rainy Days</h1><form><div class="wrapper"><div><input dir="auto" id="title" contenteditable="true" type="text" placeholder="Title"></div><div><input dir="auto" id="name" contenteditable="true" type="text" placeholder="Your name"></div><div><input dir="auto" id="content" contenteditable="true" type="text" placeholder="Your story..."></div><button class="button" onsubmit="postEntry()">PUBLISH</button><div id="postSection"></div></div></form><div class = "backgroundScene"><div class="land"></div> <div class="rain"></div> <div class="tree"> <span></span> <span></span> <span></span> <span></span>';
+    '<h1>Rainy Days.</h1><form><div class="wrapper"><div><input dir="auto" id="title" contenteditable="true" type="text" placeholder="Title"></div><div><input dir="auto" id="name" contenteditable="true" type="text" placeholder="Your name"></div><div><input dir="auto" id="content" contenteditable="true" type="text" placeholder="Your story..."></div><button class="button" onsubmit="postEntry()">PUBLISH</button><div id="postSection"></div></div></form><div class = "backgroundScene"><div class="land"></div> <div class="rain"></div> <div class="tree"> <span></span> <span></span> <span></span> <span></span>';
   }
 
   const getStory = (id) => {
@@ -88,7 +88,7 @@ const createPost = (title, name, content) => {
   const newHeader = document.createElement('h4');
   newHeader.classList.add("newHead");
   const topDiv = document.createElement("div");
-  newHeader.innerHTML = "Your Telegram is sent";
+  newHeader.innerHTML = "Your Telegram has been sent.";
   topDiv.appendChild(newHeader);
   topDiv.appendChild(createTitle(title));
   topDiv.appendChild(createName(name));
