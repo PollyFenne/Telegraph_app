@@ -14,7 +14,7 @@
 - Run `npm run dev`
 - Navigate to index.html in client folder; view on live server or through file path on browser.
 
-<!-- ![local logo](./) -->
+![local logo](/local.png)
 
 ##To use the app locally:
 - Data is destroyed on server restart
